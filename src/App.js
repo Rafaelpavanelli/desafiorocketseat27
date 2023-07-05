@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button,Buttons,Container, SideLeft, SideRight, Subtitle, Title } from "./style.sc";
+import Planet from './assets/planet.gif';
+import Number from './assets/4.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Container >
+    <SideLeft>
+      <Title>Ops, esta página não foi encontrada</Title>
+      <Subtitle>Parece que você se perdeu... Tente voltar para a página anterior ou acessar a home.</Subtitle>
+      <Buttons>
+        <Button >
+          Voltar
+        </Button>
+        <Button >
+          Ir para Home
+        </Button>
+      </Buttons>
+    </SideLeft>
+    <SideRight>
+      <img src={Number} alt="" />
+      <img src={Planet} alt="gif" />
+      <img src={Number} alt="" />
+    </SideRight>
+   </Container>
   );
 }
 
